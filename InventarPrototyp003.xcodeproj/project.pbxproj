@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		A571EB0C1C7490F4002AC2E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EB0B1C7490F4002AC2E4 /* AppDelegate.swift */; };
-		A571EB0E1C7490F4002AC2E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EB0D1C7490F4002AC2E4 /* ViewController.swift */; };
 		A571EB111C7490F4002AC2E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A571EB0F1C7490F4002AC2E4 /* Main.storyboard */; };
 		A571EB141C7490F4002AC2E4 /* InventarPrototyp003.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A571EB121C7490F4002AC2E4 /* InventarPrototyp003.xcdatamodeld */; };
 		A571EB161C7490F4002AC2E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A571EB151C7490F4002AC2E4 /* Assets.xcassets */; };
 		A571EB191C7490F4002AC2E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A571EB171C7490F4002AC2E4 /* LaunchScreen.storyboard */; };
 		A571EB241C7490F4002AC2E4 /* InventarPrototyp003Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EB231C7490F4002AC2E4 /* InventarPrototyp003Tests.swift */; };
 		A571EB2F1C7490F4002AC2E4 /* InventarPrototyp003UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EB2E1C7490F4002AC2E4 /* InventarPrototyp003UITests.swift */; };
+		A5CBEA001C7499CB008E7BCF /* RoomTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CBE9FF1C7499CB008E7BCF /* RoomTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 /* Begin PBXFileReference section */
 		A571EB081C7490F4002AC2E4 /* InventarPrototyp003.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InventarPrototyp003.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A571EB0B1C7490F4002AC2E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A571EB0D1C7490F4002AC2E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A571EB101C7490F4002AC2E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A571EB131C7490F4002AC2E4 /* InventarPrototyp003.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InventarPrototyp003.xcdatamodel; sourceTree = "<group>"; };
 		A571EB151C7490F4002AC2E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		A571EB2A1C7490F4002AC2E4 /* InventarPrototyp003UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InventarPrototyp003UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A571EB2E1C7490F4002AC2E4 /* InventarPrototyp003UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventarPrototyp003UITests.swift; sourceTree = "<group>"; };
 		A571EB301C7490F4002AC2E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5CBE9FF1C7499CB008E7BCF /* RoomTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +99,11 @@
 		A571EB0A1C7490F4002AC2E4 /* InventarPrototyp003 */ = {
 			isa = PBXGroup;
 			children = (
-				A571EB0B1C7490F4002AC2E4 /* AppDelegate.swift */,
-				A571EB0D1C7490F4002AC2E4 /* ViewController.swift */,
-				A571EB0F1C7490F4002AC2E4 /* Main.storyboard */,
+				A5CBE9FE1C74998A008E7BCF /* SupportingFiles */,
+				A5CBE9FD1C74997F008E7BCF /* View */,
+				A5CBE9FC1C749976008E7BCF /* Model */,
+				A5CBE9FB1C74996D008E7BCF /* Controller */,
 				A571EB151C7490F4002AC2E4 /* Assets.xcassets */,
-				A571EB171C7490F4002AC2E4 /* LaunchScreen.storyboard */,
 				A571EB1A1C7490F4002AC2E4 /* Info.plist */,
 				A571EB121C7490F4002AC2E4 /* InventarPrototyp003.xcdatamodeld */,
 			);
@@ -126,6 +126,38 @@
 				A571EB301C7490F4002AC2E4 /* Info.plist */,
 			);
 			path = InventarPrototyp003UITests;
+			sourceTree = "<group>";
+		};
+		A5CBE9FB1C74996D008E7BCF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A5CBE9FF1C7499CB008E7BCF /* RoomTVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A5CBE9FC1C749976008E7BCF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A5CBE9FD1C74997F008E7BCF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A571EB0F1C7490F4002AC2E4 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A5CBE9FE1C74998A008E7BCF /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A571EB0B1C7490F4002AC2E4 /* AppDelegate.swift */,
+				A571EB171C7490F4002AC2E4 /* LaunchScreen.storyboard */,
+			);
+			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +291,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A571EB0E1C7490F4002AC2E4 /* ViewController.swift in Sources */,
 				A571EB141C7490F4002AC2E4 /* InventarPrototyp003.xcdatamodeld in Sources */,
 				A571EB0C1C7490F4002AC2E4 /* AppDelegate.swift in Sources */,
+				A5CBEA001C7499CB008E7BCF /* RoomTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
