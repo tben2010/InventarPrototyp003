@@ -196,7 +196,6 @@
 				TargetAttributes = {
 					A571EB071C7490F4002AC2E4 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = QZ9HJWSALS;
 					};
 					A571EB1E1C7490F4002AC2E4 = {
 						CreatedOnToolsVersion = 7.2;
@@ -495,6 +494,7 @@
 				A571EB351C7490F4002AC2E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A571EB361C7490F4002AC2E4 /* Build configuration list for PBXNativeTarget "InventarPrototyp003Tests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +503,7 @@
 				A571EB381C7490F4002AC2E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A571EB391C7490F4002AC2E4 /* Build configuration list for PBXNativeTarget "InventarPrototyp003UITests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +512,7 @@
 				A571EB3B1C7490F4002AC2E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
