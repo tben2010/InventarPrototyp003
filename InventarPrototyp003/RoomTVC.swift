@@ -92,17 +92,17 @@ class RoomTVC: UITableViewController {
     }
     
     //MARK: - Segue
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == kFromRoomToItems {
-            let detailController = segue.destinationViewController as? ItemTVC
-            if let indexPath = tableView.indexPathForSelectedRow {
-                if let room = fetchedResultsController.objectAtIndexPath(indexPath) as? Room {
-                    detailController?.room = room
-                }
-            }
-            
-        }
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == kFromRoomToItems {
+//            let detailController = segue.destinationViewController as? ItemTVC
+//            if let indexPath = tableView.indexPathForSelectedRow {
+//                if let room = fetchedResultsController.objectAtIndexPath(indexPath) as? Room {
+//                    detailController?.room = room
+//                }
+//            }
+//            
+//        }
+//    }
 }
 
 //Version Swift 2.0
