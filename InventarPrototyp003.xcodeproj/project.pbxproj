@@ -11,6 +11,12 @@
 		A526F8131C788FCA0094C700 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526F8121C788FCA0094C700 /* Constants.swift */; };
 		A526F8151C7890320094C700 /* NSManagedObject+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526F8141C7890320094C700 /* NSManagedObject+Extention.swift */; };
 		A526F8171C78903C0094C700 /* TBENHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526F8161C78903C0094C700 /* TBENHelper.swift */; };
+		A526F81E1C78929E0094C700 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526F8181C78929E0094C700 /* Item+CoreDataProperties.swift */; };
+		A526F81F1C78929E0094C700 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526F8191C78929E0094C700 /* Item.swift */; };
+		A526F8201C78929E0094C700 /* Room+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526F81A1C78929E0094C700 /* Room+CoreDataProperties.swift */; };
+		A526F8211C78929E0094C700 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526F81B1C78929E0094C700 /* Room.swift */; };
+		A526F8221C78929E0094C700 /* Picture+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526F81C1C78929E0094C700 /* Picture+CoreDataProperties.swift */; };
+		A526F8231C78929E0094C700 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526F81D1C78929E0094C700 /* Picture.swift */; };
 		A571EB0C1C7490F4002AC2E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EB0B1C7490F4002AC2E4 /* AppDelegate.swift */; };
 		A571EB111C7490F4002AC2E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A571EB0F1C7490F4002AC2E4 /* Main.storyboard */; };
 		A571EB141C7490F4002AC2E4 /* InventarPrototyp003.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A571EB121C7490F4002AC2E4 /* InventarPrototyp003.xcdatamodeld */; };
@@ -43,6 +49,12 @@
 		A526F8121C788FCA0094C700 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A526F8141C7890320094C700 /* NSManagedObject+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Extention.swift"; sourceTree = "<group>"; };
 		A526F8161C78903C0094C700 /* TBENHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBENHelper.swift; sourceTree = "<group>"; };
+		A526F8181C78929E0094C700 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A526F8191C78929E0094C700 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		A526F81A1C78929E0094C700 /* Room+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Room+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A526F81B1C78929E0094C700 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		A526F81C1C78929E0094C700 /* Picture+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Picture+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A526F81D1C78929E0094C700 /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		A571EB081C7490F4002AC2E4 /* InventarPrototyp003.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InventarPrototyp003.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A571EB0B1C7490F4002AC2E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A571EB101C7490F4002AC2E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -125,7 +137,6 @@
 				A5CBE9FB1C74996D008E7BCF /* Controller */,
 				A571EB151C7490F4002AC2E4 /* Assets.xcassets */,
 				A571EB1A1C7490F4002AC2E4 /* Info.plist */,
-				A571EB121C7490F4002AC2E4 /* InventarPrototyp003.xcdatamodeld */,
 			);
 			path = InventarPrototyp003;
 			sourceTree = "<group>";
@@ -159,6 +170,13 @@
 		A5CBE9FC1C749976008E7BCF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A526F81A1C78929E0094C700 /* Room+CoreDataProperties.swift */,
+				A526F8181C78929E0094C700 /* Item+CoreDataProperties.swift */,
+				A526F81C1C78929E0094C700 /* Picture+CoreDataProperties.swift */,
+				A526F81B1C78929E0094C700 /* Room.swift */,
+				A526F8191C78929E0094C700 /* Item.swift */,
+				A526F81D1C78929E0094C700 /* Picture.swift */,
+				A571EB121C7490F4002AC2E4 /* InventarPrototyp003.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -312,13 +330,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A526F8221C78929E0094C700 /* Picture+CoreDataProperties.swift in Sources */,
 				A526F8171C78903C0094C700 /* TBENHelper.swift in Sources */,
+				A526F81F1C78929E0094C700 /* Item.swift in Sources */,
 				A526F8131C788FCA0094C700 /* Constants.swift in Sources */,
+				A526F81E1C78929E0094C700 /* Item+CoreDataProperties.swift in Sources */,
 				A571EB141C7490F4002AC2E4 /* InventarPrototyp003.xcdatamodeld in Sources */,
 				A526F8151C7890320094C700 /* NSManagedObject+Extention.swift in Sources */,
 				A571EB0C1C7490F4002AC2E4 /* AppDelegate.swift in Sources */,
 				A5CBEA001C7499CB008E7BCF /* RoomTVC.swift in Sources */,
+				A526F8201C78929E0094C700 /* Room+CoreDataProperties.swift in Sources */,
+				A526F8231C78929E0094C700 /* Picture.swift in Sources */,
 				A526F8111C788FB50094C700 /* CoreDataStack.swift in Sources */,
+				A526F8211C78929E0094C700 /* Room.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
