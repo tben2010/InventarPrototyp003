@@ -19,6 +19,8 @@
 		A526F8231C78929E0094C700 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526F81D1C78929E0094C700 /* Picture.swift */; };
 		A526F8251C7893CB0094C700 /* RoomTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526F8241C7893CB0094C700 /* RoomTVC.swift */; };
 		A526F8271C7894090094C700 /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526F8261C7894090094C700 /* RoomCell.swift */; };
+		A526F8291C7895420094C700 /* ItemTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526F8281C7895420094C700 /* ItemTVC.swift */; };
+		A526F82B1C7895610094C700 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526F82A1C7895610094C700 /* ItemCell.swift */; };
 		A571EB0C1C7490F4002AC2E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EB0B1C7490F4002AC2E4 /* AppDelegate.swift */; };
 		A571EB111C7490F4002AC2E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A571EB0F1C7490F4002AC2E4 /* Main.storyboard */; };
 		A571EB141C7490F4002AC2E4 /* InventarPrototyp003.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A571EB121C7490F4002AC2E4 /* InventarPrototyp003.xcdatamodeld */; };
@@ -58,6 +60,8 @@
 		A526F81D1C78929E0094C700 /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		A526F8241C7893CB0094C700 /* RoomTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTVC.swift; sourceTree = "<group>"; };
 		A526F8261C7894090094C700 /* RoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
+		A526F8281C7895420094C700 /* ItemTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTVC.swift; sourceTree = "<group>"; };
+		A526F82A1C7895610094C700 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		A571EB081C7490F4002AC2E4 /* InventarPrototyp003.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InventarPrototyp003.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A571EB0B1C7490F4002AC2E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A571EB101C7490F4002AC2E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 			children = (
 				A526F8241C7893CB0094C700 /* RoomTVC.swift */,
 				A526F8261C7894090094C700 /* RoomCell.swift */,
+				A526F8281C7895420094C700 /* ItemTVC.swift */,
+				A526F82A1C7895610094C700 /* ItemCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -336,10 +342,12 @@
 				A526F8221C78929E0094C700 /* Picture+CoreDataProperties.swift in Sources */,
 				A526F8171C78903C0094C700 /* TBENHelper.swift in Sources */,
 				A526F81F1C78929E0094C700 /* Item.swift in Sources */,
+				A526F8291C7895420094C700 /* ItemTVC.swift in Sources */,
 				A526F8251C7893CB0094C700 /* RoomTVC.swift in Sources */,
 				A526F8131C788FCA0094C700 /* Constants.swift in Sources */,
 				A526F81E1C78929E0094C700 /* Item+CoreDataProperties.swift in Sources */,
 				A571EB141C7490F4002AC2E4 /* InventarPrototyp003.xcdatamodeld in Sources */,
+				A526F82B1C7895610094C700 /* ItemCell.swift in Sources */,
 				A526F8151C7890320094C700 /* NSManagedObject+Extention.swift in Sources */,
 				A571EB0C1C7490F4002AC2E4 /* AppDelegate.swift in Sources */,
 				A526F8201C78929E0094C700 /* Room+CoreDataProperties.swift in Sources */,

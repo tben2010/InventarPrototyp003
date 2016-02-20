@@ -1,5 +1,5 @@
 //
-//  InventoryTVC.swift
+//  ItemTVC.swift
 //  InventoryPrototyp002
 //
 //  Created by tben on 05.02.16|KW5.
@@ -9,13 +9,17 @@
 import UIKit
 import CoreData
 
-class RoomTVC: UITableViewController {
+class ItemTVC: UITableViewController {
+    
     //MARK: - Variable
+    var room:Room!
+
     //MARK: - NSFetchedResultsContoller Version für Swift 2.0
     private lazy var fetchedResultsController: NSFetchedResultsController! = {
         
-        let request = NSFetchRequest(entityName: kRoomEntity)
-        request.sortDescriptors = [NSSortDescriptor(key: kRoomTitle, ascending: true)]
+        let request = NSFetchRequest(entityName: kItemEntity)
+        request.predicate = NSPredicate(format: "room == %@", self.room)
+        request.sortDescriptors = [NSSortDescriptor(key: kItemTitle, ascending: true)]
         
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataStack.sharedInstance.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         
@@ -31,35 +35,31 @@ class RoomTVC: UITableViewController {
         
         return fetchedResultsController
     }()
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Title für den TableViewController, mit NSLocalizedString wegen Übersetzung
-        title = NSLocalizedString("titleRoomViewController", value: "Room", comment: "Title from Room List")
+        
+        title = room.title
         
         //Rechtes Pluszeichen
-        let addButton =  UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addRoom:")
+        let addButton =  UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addItem:")
         
         navigationItem.setRightBarButtonItems([addButton], animated: true)
-        
     }
     
-    
     //MARK: - Methoden
-    func addRoom(sender:UIBarButtonItem){
+    func addItem(sender:UIBarButtonItem){
         //Feldinhalte für den AlertController, mit NSLocalizedString wegen Übersetzung
-        let title = NSLocalizedString("titleCreateRoom",value:"Create New Room", comment: "title in alert Controller")
-        let placeholder = NSLocalizedString("placeholderCreateRoom",value:"Room", comment: "placeholder in alert Controller")
-        let message = NSLocalizedString("placeholderCreateRoom",value:"Type in or dictate a room. Press >OK< to save. The dialog will pop up again so that it is easy to create a number of rooms. Press >Cancel< if your room list is complete.", comment: "message in alert Controller")
-        let ok = NSLocalizedString("OkButtonCreateRoom",value:"OK", comment: "Label OK in alert Controller")
-        let cancel = NSLocalizedString("CancelButtonCreateRoom",value:"Cancel", comment: "Label Cancel in alert Controller")
+        let title = NSLocalizedString("titleCreateItem",value:"Create New Item", comment: "title in alert Controller")
+        let placeholder = NSLocalizedString("placeholderCreateRoom",value:"Item", comment: "placeholder in alert Controller")
+        let message = NSLocalizedString("placeholderCreateItem",value:"Type in or dictate a item. Press >OK< to save. The dialog will pop up again so that it is easy to create a number of items. Press >Cancel< if your item list is complete.", comment: "message in alert Controller")
+        let ok = NSLocalizedString("OkButtonCreateItem",value:"OK", comment: "Label OK in alert Controller")
+        let cancel = NSLocalizedString("CancelButtonCreateItem",value:"Cancel", comment: "Label Cancel in alert Controller")
         let dialog = TBENHelper.singleTextFieldDialogWithTitle(title, message: message, placeholder: placeholder, textFieldValue: "", ok: ok, cancel: cancel) { [weak self] (text) in
             
-            Room.createRoomWithTitle(text)
+            Item.createItemForRoom(self!.room, withTitle: text)
             
-            TBENHelper.delayOnMainQueue(0.3, closure: { 
-                self?.addRoom(sender)
+            TBENHelper.delayOnMainQueue(0.3, closure: {
+                self?.addItem(sender)
             })
             
         }
@@ -68,6 +68,19 @@ class RoomTVC: UITableViewController {
         
         
     }
+    
+    //MARK: - Segue
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == kFromItemToImage {
+//            let detailController = segue.destinationViewController as? PictureTVC
+//            if let indexPath = tableView.indexPathForSelectedRow {
+//                if let item = fetchedResultsController.objectAtIndexPath(indexPath) as? Item {
+//                    detailController?.item = item
+//                }
+//            }
+//            
+//        }
+//    }
 
     // MARK: - Table view data source
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -79,34 +92,21 @@ class RoomTVC: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(kRoomCell, forIndexPath: indexPath) as! RoomCell
-        cell.room = fetchedResultsController.objectAtIndexPath(indexPath) as! Room
+        let cell = tableView.dequeueReusableCellWithIdentifier(kItemCell, forIndexPath: indexPath) as! ItemCell
+        cell.item = fetchedResultsController.objectAtIndexPath(indexPath) as! Item
         return cell
     }
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete{
-            let room = fetchedResultsController.objectAtIndexPath(indexPath) as! Room
-            room.deleteRecord()
-        }
-    }
-    
-    //MARK: - Segue
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == kFromRoomToItems {
-            let detailController = segue.destinationViewController as? ItemTVC
-            if let indexPath = tableView.indexPathForSelectedRow {
-                if let room = fetchedResultsController.objectAtIndexPath(indexPath) as? Room {
-                    detailController?.room = room
-                }
-            }
-            
+            let item = fetchedResultsController.objectAtIndexPath(indexPath) as! Item
+            item.deleteRecord()
         }
     }
 }
 
 //Version Swift 2.0
-extension RoomTVC: NSFetchedResultsControllerDelegate{
+extension ItemTVC: NSFetchedResultsControllerDelegate{
     
     func controllerWillChangeContent(controller: NSFetchedResultsController) {
         tableView.beginUpdates()
@@ -133,3 +133,4 @@ extension RoomTVC: NSFetchedResultsControllerDelegate{
         }
     }
 }
+
