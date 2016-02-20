@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A526F8111C788FB50094C700 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526F8101C788FB50094C700 /* CoreDataStack.swift */; };
+		A526F8131C788FCA0094C700 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526F8121C788FCA0094C700 /* Constants.swift */; };
+		A526F8151C7890320094C700 /* NSManagedObject+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526F8141C7890320094C700 /* NSManagedObject+Extention.swift */; };
+		A526F8171C78903C0094C700 /* TBENHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526F8161C78903C0094C700 /* TBENHelper.swift */; };
 		A571EB0C1C7490F4002AC2E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EB0B1C7490F4002AC2E4 /* AppDelegate.swift */; };
 		A571EB111C7490F4002AC2E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A571EB0F1C7490F4002AC2E4 /* Main.storyboard */; };
 		A571EB141C7490F4002AC2E4 /* InventarPrototyp003.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A571EB121C7490F4002AC2E4 /* InventarPrototyp003.xcdatamodeld */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A526F8101C788FB50094C700 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		A526F8121C788FCA0094C700 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A526F8141C7890320094C700 /* NSManagedObject+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Extention.swift"; sourceTree = "<group>"; };
+		A526F8161C78903C0094C700 /* TBENHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBENHelper.swift; sourceTree = "<group>"; };
 		A571EB081C7490F4002AC2E4 /* InventarPrototyp003.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InventarPrototyp003.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A571EB0B1C7490F4002AC2E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A571EB101C7490F4002AC2E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +84,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A526F80F1C788FA80094C700 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A526F8101C788FB50094C700 /* CoreDataStack.swift */,
+				A526F8121C788FCA0094C700 /* Constants.swift */,
+				A526F8141C7890320094C700 /* NSManagedObject+Extention.swift */,
+				A526F8161C78903C0094C700 /* TBENHelper.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
 		A571EAFF1C7490F4002AC2E4 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +118,7 @@
 		A571EB0A1C7490F4002AC2E4 /* InventarPrototyp003 */ = {
 			isa = PBXGroup;
 			children = (
+				A526F80F1C788FA80094C700 /* Helper */,
 				A5CBE9FE1C74998A008E7BCF /* SupportingFiles */,
 				A5CBE9FD1C74997F008E7BCF /* View */,
 				A5CBE9FC1C749976008E7BCF /* Model */,
@@ -292,9 +312,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A526F8171C78903C0094C700 /* TBENHelper.swift in Sources */,
+				A526F8131C788FCA0094C700 /* Constants.swift in Sources */,
 				A571EB141C7490F4002AC2E4 /* InventarPrototyp003.xcdatamodeld in Sources */,
+				A526F8151C7890320094C700 /* NSManagedObject+Extention.swift in Sources */,
 				A571EB0C1C7490F4002AC2E4 /* AppDelegate.swift in Sources */,
 				A5CBEA001C7499CB008E7BCF /* RoomTVC.swift in Sources */,
+				A526F8111C788FB50094C700 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
