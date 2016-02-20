@@ -70,17 +70,17 @@ class ItemTVC: UITableViewController {
     }
     
     //MARK: - Segue
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == kFromItemToImage {
-//            let detailController = segue.destinationViewController as? PictureTVC
-//            if let indexPath = tableView.indexPathForSelectedRow {
-//                if let item = fetchedResultsController.objectAtIndexPath(indexPath) as? Item {
-//                    detailController?.item = item
-//                }
-//            }
-//            
-//        }
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == kFromItemToImage {
+            let detailController = segue.destinationViewController as? PictureTVC
+            if let indexPath = tableView.indexPathForSelectedRow {
+                if let item = fetchedResultsController.objectAtIndexPath(indexPath) as? Item {
+                    detailController?.item = item
+                }
+            }
+            
+        }
+    }
 
     // MARK: - Table view data source
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
