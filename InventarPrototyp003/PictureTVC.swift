@@ -46,7 +46,7 @@ class PictureTVC: UITableViewController {
         imagePickerSetup()
         
         //Rechtes Pluszeichen
-        let addButton =  UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addPicture:")
+        let addButton =  UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(addPicture(_:)))
         
         navigationItem.setRightBarButtonItems([addButton], animated: true)
     }
