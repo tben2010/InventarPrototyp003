@@ -147,8 +147,6 @@
 				A5CBE9FD1C74997F008E7BCF /* View */,
 				A5CBE9FC1C749976008E7BCF /* Model */,
 				A5CBE9FB1C74996D008E7BCF /* Controller */,
-				A571EB151C7490F4002AC2E4 /* Assets.xcassets */,
-				A571EB1A1C7490F4002AC2E4 /* Info.plist */,
 			);
 			path = InventarPrototyp003;
 			sourceTree = "<group>";
@@ -212,6 +210,8 @@
 			children = (
 				A571EB0B1C7490F4002AC2E4 /* AppDelegate.swift */,
 				A571EB171C7490F4002AC2E4 /* LaunchScreen.storyboard */,
+				A571EB151C7490F4002AC2E4 /* Assets.xcassets */,
+				A571EB1A1C7490F4002AC2E4 /* Info.plist */,
 			);
 			name = SupportingFiles;
 			sourceTree = "<group>";

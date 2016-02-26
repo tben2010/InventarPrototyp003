@@ -38,6 +38,8 @@ class RoomTVC: UITableViewController {
         //Title für den TableViewController, mit NSLocalizedString wegen Übersetzung
         title = NSLocalizedString("titleRoomViewController", value: "Room", comment: "Title from Room List")
         
+        //print("Die Fkt. ' \(#function) ' wurde ausgeführt")
+        
         //Rechtes Pluszeichen
         let addButton =  UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addRoom:")
         
