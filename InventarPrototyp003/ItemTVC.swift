@@ -41,7 +41,8 @@ class ItemTVC: UITableViewController {
         title = room.title
         
         //Rechtes Pluszeichen
-        let addButton =  UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(addItem(_:)))
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addItem:")
+        //let addButton =  UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(addItem(_:)))
         
         navigationItem.setRightBarButtonItems([addButton], animated: true)
     }
