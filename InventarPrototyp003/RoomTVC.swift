@@ -41,8 +41,7 @@ class RoomTVC: UITableViewController {
         //print("Die Fkt. ' \(#function) ' wurde ausgeführt")
         
         //Rechtes Pluszeichen
-        let addButton =  UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addRoom:")
-        //let addButton =  UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(addRoom(_:)))
+        let addButton =  UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(addRoom(_:)))
         
         navigationItem.setRightBarButtonItems([addButton], animated: true)
         
